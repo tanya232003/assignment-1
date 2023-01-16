@@ -1,6 +1,13 @@
-a = 1440
+num = int(input("enter the number : "))
 
-for i in range(2,100):
-    if a%i==0:
-        print(i)
-        a = a//i
+f = 0
+
+for i in range(2, num+1):
+    if num % i == 0:
+        for j in range(2, int(i/2)):
+            if i%j == 0:
+                f = 1
+                break
+
+        if f==0:
+            print(i)
